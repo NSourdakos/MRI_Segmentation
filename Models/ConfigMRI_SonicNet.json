@@ -1,0 +1,42 @@
+{
+    "dataset": {
+        
+        "in_memory_percentage": 1,
+        "overlap_percentage" : 0.5,
+        "shape": [128, 128, 160],
+        "num_condition_classes": 30,
+        "path": "G:\\Books\\AI\\CODE\\Internship\\Prepro_Data\\",
+        "dictionary_path": "G:\\Books\\AI\\CODE\\Internship\\label_convert_final.npy",
+        "test_data":200
+
+        
+    },
+    "model": {
+        "input_size": [48,48,48,1] ,
+        "num_classes": 30,
+        "U-depth": 5,
+        "Dropout": 0.3,
+        "filters": {
+            "widths":[32,48,64,96,128,192,256,384]
+        },
+        "num_stacks": 2,
+        "deep_supervision": 0
+    },
+    "optimizer": {
+        "decay": 0.0,
+        "epsilon": 1e-08,
+        "lr": 0.00005,
+        "momentum": 0.9,
+        "type": "RMSprop"
+    },
+    "training": {
+        "batch_size": 10,
+        "early_stopping_patience": 100,
+        "num_epochs": 100,
+        "num_test_samples": 441,
+        "num_train_samples": 441,
+        "path": "G:\\Books\\AI\\CODE\\Internship\\Models\\SonicNet\\Training\\64x64\\",
+        "output_path": "G:\\Books\\AI\\CODE\\Internship\\Models\\SonicNet\\Training\\64x64\\",
+        "verbosity": 2
+    }
+}
